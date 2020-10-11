@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <title> cinéma </title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+
+                <h2 class="col m6 s12">Bienvenue à tous dans votre cinéma</h2>
+
+                <a href="index.html"><img src="assets/img/logo.gif" class="responsive-img col m6 s12" id="logo"
+                        alt="logo" title="logo"></a>
+
+            </div>
+
+            <nav class="blue-grey lighten-1" id="navmed">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="mobile-demoo" class="sidenav-trigger right"><i
+                            class="material-icons">menu</i></a>
+
+                    <ul class="right hide-on-med-and-down">
+                        <li><a class="flow-text" href="index.html">Actualité </a></li>
+                        <li><a class="flow-text" href="index.html">Nos salles</a></li>
+                        <li><a class="flow-text" href="creer_un_compte.html">Creer un compte</a></li>
+                        <li><a class="flow-text" href="contact.html"> Reserver </a></li>
+                        <li><a class="flow-text" href="#test4"> Service</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="form-login">
+
+            <h4 class="center">Créer vos indentiants</h4>
+            <form id="app" @submit="checkForm" action="#" method="post">
+                <div class="row">
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">contact_mail</i>
+                        <input name='email' id="email" type="email" v-model="email" class="validate" value="">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">remove_red_eye</i>
+                        <input name="pwd1" id="pwd1" v-model="pwd1" type="password" class="validate" value="">
+                        <label for="pwd1">Créer votre mot de passe</label>
+                    </div>
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">remove_red_eye</i>
+                        <input name="pwd2" id="pwd2" v-model="pwd2" type="password" class="validate" value="">
+                        <label for="pwd2">Confirmer votre mot de passe</label>
+                    </div>
+                </div>
+                <h4 class="center">Céer vos indentiants</h4>
+                <div class="row">
+                    <div class="row col m6 s12">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">person</i>
+                            <input name='lastname' id="lastname" v-model="lastname" type="text" class="validate"
+                                value="">
+                            <label for="lastname">Votre nom</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">person</i>
+                            <input name="firstname" id="firstname" v-model="firstname" type="text" class="validate"
+                                value="">
+                            <label for="firstname">Votre prénom</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">place</i>
+                            <input name="adresse" id="adresse" v-model="adresse" type="text" class="validate" value="">
+                            <label for="adresse">Votre adresse</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">place</i>
+                            <input name="cpostal" id="cpostal" v-model="cpostal" type="text" maxlength="5"
+                                class="validate" value="">
+                            <label for="cpostal">Votre code postal</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">place</i>
+                            <input name="city" id="city" type="text" v-model="city" class="validate" value="">
+                            <label for="city">Ville</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">place</i>
+                            <input name="pays" id="pays" type="text" v-model="pays" class="validate" value="">
+                            <label for="country">Pays</label>
+                        </div>
+                    </div>
+                    <div class="row col m6 s12">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">phone</i>
+                            <input name="mobile" id="mobile" v-model="mobil" type="tel" class="validate" value="">
+                            <label for="mobile">Téléphone portable</label>
+
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">contact_phone</i>
+                            <input name="fixe" id="fixe" v-model="fixe" type="tel" class="validate" value="">
+                            <label for="fixe">Téléphone fixe </label>
+
+                        </div>
+                        <h4 class="center blue-text text-darken-2">Suivre mes réservations par SMS</h4>
+
+                        <p>
+                            <label>
+                                <input type="radio" name="choix" />
+                                <span>OUI</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="radio" checked="checked" name="choix" />
+                                <span>NON</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <label for="subscribeNews">
+                        <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+                        <span>Souhaitez-vous vous abonner à la newsletter ?</span>
+                    </label>
+                </div>
+
+                <div class="center">
+                    <button type="submit" name="valider" id="valider" class="btn orange darken-4 center">Valider mon
+                        inscription <i class="material-icons right">person_add</i></button>
+                </div>
+            </form>
+        </div>
+
+        <br>
+        <hr>
+        <footer>
+            <a href="index.html">
+                <img src="assets/img/img1.jpg" class="responsive-img center" id="partenaire" alt="Nos partenaire"
+                    title="Nos partenaire"></a>
+        </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--script materialize-->
+
+
+</body>
+
+</html>

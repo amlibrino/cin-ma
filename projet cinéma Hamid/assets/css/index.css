@@ -1,0 +1,43 @@
+.form-login{
+    margin: 5%;
+    /*padding-bottom: 10%;*/
+    
+}
+
+
+.midle{
+    margin: 3%;
+}
+#pub{
+    /*z-index: 2;*/
+}
+#pub1{
+    width: auto;
+    height: 50% !important;
+    /*z-index: 1;*/
+}
+
+#pub2{
+    width: auto;
+    height: auto !important;
+}
+h5{
+    margin-left: 5%;
+}
+#cat-img{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+@media screen and (max-width: 640px) /*demenssion mobile*/
+    {
+        #pub2{
+            display: none;
+        }
+        #pub1{ 
+            width: 100%;
+            height: auto;
+        } 
+    } 
+
+
+
